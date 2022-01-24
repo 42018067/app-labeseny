@@ -27,7 +27,7 @@ SECRET_KEY=config('SECRET_KEY')
 DEBUG = config('DEBUG')
 
 #ALLOWED_HOSTS = []
-ALLOWED_HOSTS = ['127.0.0.1','.localhost', 'labeseny.herokuapp.com']
+ALLOWED_HOSTS = ['127.0.0.1','.localhost', 'app-labeseny.herokuapp.com']
 
 # Application definition
 
