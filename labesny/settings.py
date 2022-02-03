@@ -90,11 +90,10 @@ CORS_ALLOWED_ORIGINS = [
 #To change the language of Db in heroku bec. heroku didnt support sqlite3
 
 
+default_dburl = 'sqlite:///' + os.path.join(BASE_DIR, 'db.sqlite3')
 DATABASES = {
-            'default': config('DATABASE_URL', default=default_dburl, cast=dburl),
-     }
-default_dburl = 'sqlite:///' + os.path.join(BASE_DIR, 'db.sqlite3') 
-
+                'default': config('DATABASE_URL', default=default_dburl, cast=dburl),
+            }
 #original D.B
 #DATABASES = {
 #   'default': {
