@@ -90,16 +90,21 @@ CORS_ALLOWED_ORIGINS = [
 #To change the language of Db in heroku bec. heroku didnt support sqlite3
 
 
+default_dburl = 'sqlite:///' + os.path.join(BASE_DIR, 'db.sqlite3')
 DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'd635qids9ae33g',
-        'USER': 'htiuqobdtorvcu',
-        'PASSWORD': '03f95579834c2a8d9fb7a1f565f371977707b77047391a2302af1359cb4899dd',
-        'HOST': 'ec2-54-216-17-9.eu-west-1.compute.amazonaws.com',
-        'PORT': '5432',
-    }
+                'default': config('DATABASE_URL', default=default_dburl, cast=dburl),
 }
+
+#DATABASES = {
+#    'default': {
+#        'ENGINE': 'django.db.backends.postgresql',
+#        'NAME': 'd635qids9ae33g',
+#        'USER': 'htiuqobdtorvcu',
+#        'PASSWORD': '03f95579834c2a8d9fb7a1f565f371977707b77047391a2302af1359cb4899dd',
+#        'HOST': 'ec2-54-216-17-9.eu-west-1.compute.amazonaws.com',
+#        'PORT': '5432',
+#    }
+#}
 
 #original D.B
 #DATABASES = {
