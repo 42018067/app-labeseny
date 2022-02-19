@@ -11,7 +11,7 @@ https://docs.djangoproject.com/en/4.0/ref/settings/
 """
 from dj_database_url import parse as dburl
 from pathlib import Path
-from decouple import  config
+from decouple import config
 import os
 import django_heroku
 
