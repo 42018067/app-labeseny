@@ -13,6 +13,8 @@ from dj_database_url import parse as dburl
 from pathlib import Path
 from decouple import  config
 import os
+import django_heroku
+
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
@@ -95,6 +97,7 @@ DATABASES = {
                 'default': config('DATABASE_URL', default=default_dburl, cast=dburl),
 }
 
+
 #DATABASES = {
 #    'default': {
 #        'ENGINE': 'django.db.backends.postgresql',
@@ -165,3 +168,4 @@ REST_FRAMEWORK = {
     ],
 
 }
+django_heroku.settings(locals())
