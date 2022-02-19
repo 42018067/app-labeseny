@@ -44,6 +44,7 @@ INSTALLED_APPS = [
     'knox',
     'login',
     'corsheaders',
+    'django_rest_passwordreset',
 ]
 
 MIDDLEWARE = [
