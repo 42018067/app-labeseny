@@ -1,1 +1,2 @@
-web: gunicorn labesny.wsgi
+release: python manage.py migrate
+web: gunicorn labesny.wsgi --log-file=-
